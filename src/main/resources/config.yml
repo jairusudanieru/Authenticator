@@ -1,0 +1,5 @@
+config:
+  teleportOnSpawn: false
+
+location:
+  spawnLocation: location

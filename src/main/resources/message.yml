@@ -1,0 +1,8 @@
+message:
+  joinMessage: "<yellow>%player% joined the game"
+  quitMessage: "<yellow>%player% left the game"
+  loggedInMessage: "<yellow>Logged in"
+  loggedOutMessage: "<yellow>Logged out"
+  registeredMessage: "<reset>You are now registered, please rejoin the game!"
+  loginMessage: "<gray>/login (password)"
+  registerMessage: "<gray>/register (password) (confirmPassword)"

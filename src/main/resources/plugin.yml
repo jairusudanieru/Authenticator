@@ -1,0 +1,20 @@
+name: Authenticator
+version: '${project.version}'
+main: dev.jairusu.authenticator.Authenticator
+api-version: '1.20'
+
+commands:
+  login:
+    aliases:
+      - log
+  register:
+    aliases:
+      - reg
+  changepassword:
+    aliases:
+      - changepass
+  setspawn:
+    permission: op
+  spawn:
+  authreload:
+    permission: op
