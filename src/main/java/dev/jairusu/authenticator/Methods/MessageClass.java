@@ -11,20 +11,6 @@ public class MessageClass {
       return MiniMessage.miniMessage().deserialize(text);
    }
 
-   public static Component joinMessage(Player player) {
-      String message = MessageFile.getFileConfig().getString("message.joinMessage");
-      if (message == null) return null;
-      message = message.replace("%player%",player.getName());
-      return miniMessage(message);
-   }
-
-   public static Component quitMessage(Player player) {
-      String message = MessageFile.getFileConfig().getString("message.quitMessage");
-      if (message == null) return null;
-      message = message.replace("%player%",player.getName());
-      return miniMessage(message);
-   }
-
    public static Component loginMessage(Player player) {
       String message = MessageFile.getFileConfig().getString("message.loginMessage");
       if (message == null) return null;
@@ -39,5 +25,10 @@ public class MessageClass {
       return miniMessage(message);
    }
 
+   public static Component reloadMessage() {
+      String message = MessageFile.getFileConfig().getString("message.reloadMessage");
+      if (message == null) return null;
+      return miniMessage(message);
+   }
 
 }

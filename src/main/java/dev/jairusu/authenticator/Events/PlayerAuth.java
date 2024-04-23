@@ -53,7 +53,6 @@ public class PlayerAuth implements Listener {
          if (!PasswordFile.getPlayerFile(player).exists() || PasswordFile.getPlayerFileConfig(player).get("data.username") == null) {
             this.autoRegisterPlayer(player);
          }
-         player.sendMessage(Objects.requireNonNull(MessageClass.joinMessage(player)));
       }
    }
 

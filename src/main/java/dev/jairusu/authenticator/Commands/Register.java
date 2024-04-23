@@ -1,10 +1,7 @@
 package dev.jairusu.authenticator.Commands;
 
-import dev.jairusu.authenticator.Configuration.ConfigFile;
-import dev.jairusu.authenticator.Configuration.MessageFile;
 import dev.jairusu.authenticator.Methods.MessageClass;
 import dev.jairusu.authenticator.Configuration.PasswordFile;
-import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;

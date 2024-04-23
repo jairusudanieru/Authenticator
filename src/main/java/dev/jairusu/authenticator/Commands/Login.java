@@ -3,6 +3,7 @@ package dev.jairusu.authenticator.Commands;
 import dev.jairusu.authenticator.Methods.MessageClass;
 import dev.jairusu.authenticator.Configuration.PasswordFile;
 import dev.jairusu.authenticator.Configuration.ConfigFile;
+import net.kyori.adventure.text.Component;
 import org.bukkit.GameMode;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -58,8 +59,9 @@ public class Login implements CommandExecutor, TabCompleter {
       if (player.hasPotionEffect(PotionEffectType.BLINDNESS)) player.removePotionEffect(PotionEffectType.BLINDNESS);
       if (player.getGameMode().equals(GameMode.SPECTATOR)) player.setGameMode(GameMode.ADVENTURE);
       player.removeMetadata("unlogged", ConfigFile.plugin);
-      player.sendMessage(MessageClass.miniMessage("<yellow>Logged In!"));
-      player.sendMessage(Objects.requireNonNull(MessageClass.joinMessage(player)));
+      Component message = MessageClass.loginMessage(player);
+      if (message == null) return true;
+      sender.sendMessage(message);
       return true;
    }
 

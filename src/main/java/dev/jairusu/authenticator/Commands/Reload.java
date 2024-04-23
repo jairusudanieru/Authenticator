@@ -3,6 +3,7 @@ package dev.jairusu.authenticator.Commands;
 import dev.jairusu.authenticator.Configuration.ConfigFile;
 import dev.jairusu.authenticator.Configuration.MessageFile;
 import dev.jairusu.authenticator.Methods.MessageClass;
+import net.kyori.adventure.text.Component;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -28,7 +29,9 @@ public class Reload implements CommandExecutor, TabCompleter {
 
       ConfigFile.plugin.reloadConfig();
       MessageFile.reloadFile();
-      sender.sendMessage("Plugin successfully reloaded!");
+      Component message = MessageClass.reloadMessage();
+      if (message == null) return true;
+      sender.sendMessage(message);
       return true;
    }
 

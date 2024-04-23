@@ -39,10 +39,4 @@ public class PasswordFile {
       }
    }
 
-   public static void reloadFile(Player player) {
-      File file = getPlayerFile(player);
-      YamlConfiguration.loadConfiguration(file);
-   }
-
-
 }
